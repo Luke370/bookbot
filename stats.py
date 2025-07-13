@@ -8,3 +8,16 @@ def get_num_words(path):
     words = text.split()
     num_words = len(words)
     return num_words
+
+def get_chars(path):
+    text = get_book_text(path).lower()
+    chars = {}
+    for t in text:
+        if t not in chars:
+            chars[t] = 1
+        else:
+            chars[t] += 1
+    
+    return chars
+
+
